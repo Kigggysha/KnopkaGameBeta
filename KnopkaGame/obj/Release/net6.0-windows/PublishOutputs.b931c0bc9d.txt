@@ -1,0 +1,5 @@
+D:\C#\KnopkaGame\KnopkaGame\bin\Release\net6.0-windows\publish\KnopkaGame.exe
+D:\C#\KnopkaGame\KnopkaGame\bin\Release\net6.0-windows\publish\KnopkaGame.dll
+D:\C#\KnopkaGame\KnopkaGame\bin\Release\net6.0-windows\publish\KnopkaGame.deps.json
+D:\C#\KnopkaGame\KnopkaGame\bin\Release\net6.0-windows\publish\KnopkaGame.runtimeconfig.json
+D:\C#\KnopkaGame\KnopkaGame\bin\Release\net6.0-windows\publish\KnopkaGame.pdb
