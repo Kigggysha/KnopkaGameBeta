@@ -21,6 +21,12 @@ namespace KnopkaGame
         {
             //sound player
             ButtonPush.Play();
+            Start.Visible = false;
+            Continue.Visible = false;
+            Settings.Visible = false;
+            Exit.Visible = false;
+            this.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/TableWindows10.png");
+            Laptop.Visible = true;
         }
         //Change picture when mouse located on start button
         private void Start_MouseHover(object sender, EventArgs e)
@@ -114,6 +120,21 @@ namespace KnopkaGame
             ButtonPush.Play();
             Thread.Sleep(400);
             this.Close();
+        }
+
+        private void Continue_Click(object sender, EventArgs e)
+        {
+            Start.Visible = false;
+            Continue.Visible = false;
+            Settings.Visible = false;
+            Exit.Visible = false;
+            this.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/TableWindows10.png");
+        }
+
+        private void Laptop_Click(object sender, EventArgs e)
+        {
+            Laptop.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/LaptopButtonPressed.png");
+            this.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/TableWindows10Red.png");
         }
     }
 }

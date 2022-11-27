@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\KnopkaGame\\KnopkaGame\\KnopkaGame.csproj",
+      "projectUniqueName": "D:\\C#\\KnopkaGameBeta\\KnopkaGame\\KnopkaGame.csproj",
       "projectName": "KnopkaGame",
-      "projectPath": "D:\\C#\\KnopkaGame\\KnopkaGame\\KnopkaGame.csproj",
+      "projectPath": "D:\\C#\\KnopkaGameBeta\\KnopkaGame\\KnopkaGame.csproj",
       "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\KnopkaGame\\KnopkaGame\\obj\\",
+      "outputPath": "D:\\C#\\KnopkaGameBeta\\KnopkaGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",

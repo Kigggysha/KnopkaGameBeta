@@ -33,10 +33,12 @@
             this.Continue = new System.Windows.Forms.PictureBox();
             this.Settings = new System.Windows.Forms.PictureBox();
             this.Exit = new System.Windows.Forms.PictureBox();
+            this.Laptop = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Start)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Continue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Settings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Laptop)).BeginInit();
             this.SuspendLayout();
             // 
             // Start
@@ -67,6 +69,7 @@
             this.Continue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Continue.TabIndex = 1;
             this.Continue.TabStop = false;
+            this.Continue.Click += new System.EventHandler(this.Continue_Click);
             this.Continue.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Continue_MouseDown);
             this.Continue.MouseEnter += new System.EventHandler(this.Continue_MouseEnter);
             this.Continue.MouseLeave += new System.EventHandler(this.Continue_MouseLeave);
@@ -105,6 +108,19 @@
             this.Exit.MouseLeave += new System.EventHandler(this.Exit_MouseLeave);
             this.Exit.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Exit_MouseUp);
             // 
+            // Laptop
+            // 
+            this.Laptop.BackColor = System.Drawing.Color.Transparent;
+            this.Laptop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Laptop.BackgroundImage")));
+            this.Laptop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Laptop.Location = new System.Drawing.Point(150, 163);
+            this.Laptop.Name = "Laptop";
+            this.Laptop.Size = new System.Drawing.Size(490, 316);
+            this.Laptop.TabIndex = 4;
+            this.Laptop.TabStop = false;
+            this.Laptop.Visible = false;
+            this.Laptop.Click += new System.EventHandler(this.Laptop_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -113,6 +129,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 701);
+            this.Controls.Add(this.Laptop);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Settings);
             this.Controls.Add(this.Continue);
@@ -124,6 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Continue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Settings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Laptop)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -134,5 +152,6 @@
         private PictureBox Continue;
         private PictureBox Settings;
         private PictureBox Exit;
+        private PictureBox Laptop;
     }
 }
