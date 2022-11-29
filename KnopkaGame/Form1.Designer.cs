@@ -29,41 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.Start = new System.Windows.Forms.PictureBox();
             this.Continue = new System.Windows.Forms.PictureBox();
             this.Settings = new System.Windows.Forms.PictureBox();
             this.Exit = new System.Windows.Forms.PictureBox();
             this.Laptop = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Start)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Continue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Settings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Laptop)).BeginInit();
             this.SuspendLayout();
             // 
-            // Start
-            // 
-            this.Start.BackColor = System.Drawing.Color.Transparent;
-            this.Start.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Start.BackgroundImage")));
-            this.Start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Start.Location = new System.Drawing.Point(65, 65);
-            this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(435, 115);
-            this.Start.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Start.TabIndex = 0;
-            this.Start.TabStop = false;
-            this.Start.Click += new System.EventHandler(this.Start_Click);
-            this.Start.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Start_MouseDown);
-            this.Start.MouseEnter += new System.EventHandler(this.Start_MouseHover);
-            this.Start.MouseLeave += new System.EventHandler(this.Start_MouseLeave);
-            this.Start.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Start_MouseUp);
-            // 
             // Continue
             // 
             this.Continue.BackColor = System.Drawing.Color.Transparent;
-            this.Continue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Continue.BackgroundImage")));
             this.Continue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Continue.Location = new System.Drawing.Point(65, 200);
+            this.Continue.Location = new System.Drawing.Point(57, 140);
             this.Continue.Name = "Continue";
             this.Continue.Size = new System.Drawing.Size(435, 115);
             this.Continue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -78,9 +58,8 @@
             // Settings
             // 
             this.Settings.BackColor = System.Drawing.Color.Transparent;
-            this.Settings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Settings.BackgroundImage")));
             this.Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Settings.Location = new System.Drawing.Point(65, 335);
+            this.Settings.Location = new System.Drawing.Point(57, 275);
             this.Settings.Name = "Settings";
             this.Settings.Size = new System.Drawing.Size(435, 115);
             this.Settings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -94,9 +73,8 @@
             // Exit
             // 
             this.Exit.BackColor = System.Drawing.Color.Transparent;
-            this.Exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Exit.BackgroundImage")));
             this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Exit.Location = new System.Drawing.Point(65, 475);
+            this.Exit.Location = new System.Drawing.Point(57, 415);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(435, 115);
             this.Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,7 +89,6 @@
             // Laptop
             // 
             this.Laptop.BackColor = System.Drawing.Color.Transparent;
-            this.Laptop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Laptop.BackgroundImage")));
             this.Laptop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Laptop.Location = new System.Drawing.Point(150, 163);
             this.Laptop.Name = "Laptop";
@@ -133,11 +110,11 @@
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Settings);
             this.Controls.Add(this.Continue);
-            this.Controls.Add(this.Start);
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "KnopkaGame";
-            ((System.ComponentModel.ISupportInitialize)(this.Start)).EndInit();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             ((System.ComponentModel.ISupportInitialize)(this.Continue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Settings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
@@ -147,8 +124,6 @@
         }
 
         #endregion
-
-        private PictureBox Start;
         private PictureBox Continue;
         private PictureBox Settings;
         private PictureBox Exit;

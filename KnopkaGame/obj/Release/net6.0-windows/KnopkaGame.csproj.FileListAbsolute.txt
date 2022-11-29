@@ -16,3 +16,6 @@ D:\C#\KnopkaGame\KnopkaGame\obj\Release\net6.0-windows\refint\KnopkaGame.dll
 D:\C#\KnopkaGame\KnopkaGame\obj\Release\net6.0-windows\KnopkaGame.pdb
 D:\C#\KnopkaGame\KnopkaGame\obj\Release\net6.0-windows\KnopkaGame.genruntimeconfig.cache
 D:\C#\KnopkaGame\KnopkaGame\obj\Release\net6.0-windows\ref\KnopkaGame.dll
+D:\C#\KnopkaGame\KnopkaGame\bin\Release\net6.0-windows\Microsoft.Data.Sqlite.dll
+D:\C#\KnopkaGame\KnopkaGame\bin\Release\net6.0-windows\SQLitePCLRaw.core.dll
+D:\C#\KnopkaGame\KnopkaGame\obj\Release\net6.0-windows\KnopkaGame.csproj.CopyComplete
