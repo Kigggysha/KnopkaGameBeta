@@ -36,6 +36,8 @@
             this.Cup = new System.Windows.Forms.PictureBox();
             this.SettingsWindow = new System.Windows.Forms.PictureBox();
             this.SettingsClose = new System.Windows.Forms.PictureBox();
+            this.SoundFX = new System.Windows.Forms.PictureBox();
+            this.Music = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Continue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Settings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
@@ -43,6 +45,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Cup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SettingsWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SettingsClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoundFX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Music)).BeginInit();
             this.SuspendLayout();
             // 
             // Continue
@@ -148,6 +152,32 @@
             this.SettingsClose.MouseEnter += new System.EventHandler(this.SettingsClose_MouseEnter);
             this.SettingsClose.MouseLeave += new System.EventHandler(this.SettingsClose_MouseLeave);
             // 
+            // SoundFX
+            // 
+            this.SoundFX.BackColor = System.Drawing.Color.Transparent;
+            this.SoundFX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SoundFX.Location = new System.Drawing.Point(262, 275);
+            this.SoundFX.Name = "SoundFX";
+            this.SoundFX.Size = new System.Drawing.Size(80, 75);
+            this.SoundFX.TabIndex = 8;
+            this.SoundFX.TabStop = false;
+            this.SoundFX.Tag = "SettingsMenuUI";
+            this.SoundFX.Visible = false;
+            this.SoundFX.Click += new System.EventHandler(this.SoundFX_Click);
+            // 
+            // Music
+            // 
+            this.Music.BackColor = System.Drawing.Color.Transparent;
+            this.Music.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Music.Location = new System.Drawing.Point(262, 434);
+            this.Music.Name = "Music";
+            this.Music.Size = new System.Drawing.Size(80, 75);
+            this.Music.TabIndex = 9;
+            this.Music.TabStop = false;
+            this.Music.Tag = "SettingsMenuUI";
+            this.Music.Visible = false;
+            this.Music.Click += new System.EventHandler(this.Music_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -156,13 +186,15 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 701);
+            this.Controls.Add(this.Music);
+            this.Controls.Add(this.SoundFX);
+            this.Controls.Add(this.SettingsWindow);
             this.Controls.Add(this.SettingsClose);
             this.Controls.Add(this.Cup);
             this.Controls.Add(this.Laptop);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Settings);
             this.Controls.Add(this.Continue);
-            this.Controls.Add(this.SettingsWindow);
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "KnopkaGame";
@@ -174,6 +206,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Cup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SettingsWindow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SettingsClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoundFX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Music)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,5 +220,7 @@
         private PictureBox Cup;
         private PictureBox SettingsWindow;
         private PictureBox SettingsClose;
+        private PictureBox SoundFX;
+        private PictureBox Music;
     }
 }

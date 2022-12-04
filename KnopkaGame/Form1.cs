@@ -12,8 +12,11 @@ namespace KnopkaGame
     {
         System.Media.SoundPlayer ButtonSelect = new System.Media.SoundPlayer("../KnopkaGame/Sounds/ButtonSelect.wav"); //play sound of selected button
         System.Media.SoundPlayer ButtonPush = new System.Media.SoundPlayer("../KnopkaGame/Sounds/ButtonPush.wav"); //play sound of pushed button
+        System.Media.SoundPlayer BackMusic = new System.Media.SoundPlayer("../KnopkaGame/Sounds/BackMusic.wav");
+
         string ConnectionString = "DataSource=../KnopkaGame/Base/Save.db"; //Connection string for sqlite connect
         object id;
+        Boolean SFX = true, MusicSound = true;
         public Form1()
         {
             InitializeComponent();
@@ -36,6 +39,7 @@ namespace KnopkaGame
             }
             Settings.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/Settings.png");
             Exit.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/Exit.png");
+            BackMusic.Play();
         }
         //Start baton click function
         //Change picture when mouse located on start button
@@ -163,7 +167,25 @@ namespace KnopkaGame
             Exit.Visible = false;
             SettingsWindow.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/SettingsWindow.png");
             SettingsClose.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/ExitButton.png");
+            if (SFX)
+            {
+                SoundFX.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/SoundOn.png");
+            }
+            else
+            {
+                SoundFX.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/SoundOff.png");
+            }
+            if (MusicSound)
+            {
+                Music.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/SoundOn.png");
+            }
+            else
+            {
+                Music.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/SoundOff.png");
+            }
             SettingsClose.Visible = true;
+            SoundFX.Visible = true;
+            Music.Visible = true;
             SettingsWindow.Visible = true;
         }
 
@@ -178,10 +200,46 @@ namespace KnopkaGame
             SettingsClose.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/ExitButton.png");
         }
 
+        private void SoundFX_Click(object sender, EventArgs e)
+        {
+            if (SFX)
+            {
+                SFX = false;
+                SoundFX.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/SoundOff.png");
+                ButtonSelect.SoundLocation = "../KnopkaGame/Sounds/Silence.wav";
+                ButtonPush.SoundLocation = "../KnopkaGame/Sounds/Silence.wav";
+            }
+            else
+            {
+                SFX = true;
+                SoundFX.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/SoundOn.png");
+                ButtonSelect.SoundLocation = "../KnopkaGame/Sounds/ButtonSelect.wav";
+                ButtonPush.SoundLocation = "../KnopkaGame/Sounds/ButtonPush.wav";
+            }
+        }
+
+        private void Music_Click(object sender, EventArgs e)
+        {
+            if (MusicSound)
+            {
+                MusicSound = false;
+                Music.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/SoundOff.png");
+                BackMusic.SoundLocation = "../KnopkaGame/Sounds/Silence.wav";
+            }
+            else
+            {
+                MusicSound = true;
+                Music.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/SoundOn.png");
+                BackMusic.SoundLocation = "../KnopkaGame/Sounds/BackMusic.wav";
+            }
+        }
+
         private void SettingsClose_Click(object sender, EventArgs e)
         {
             SettingsClose.Visible = false;
             SettingsWindow.Visible = false;
+            SoundFX.Visible = false;
+            Music.Visible = false;
             Continue.Visible = true;
             Settings.Visible = true;
             Exit.Visible = true;

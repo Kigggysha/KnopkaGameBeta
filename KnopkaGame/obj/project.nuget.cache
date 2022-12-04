@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G+q41aQy1FpgWJCbHpwfXh0t/0sPq7FsCT5uDi+RxjxXWGlXEkLiMuNg15kLOi7emJKpSMeGKVu/qFDMvdEChA==",
+  "dgSpecHash": "rFWlRCQ+Zqkke/2MUf6s3Y5yr6inTudvvlzQoJBVw8EpOMeElA5dQ/EUISnLeFMX1XB2FREYUDAgx5jMZ5FkoQ==",
   "success": true,
-  "projectFilePath": "D:\\C#\\KnopkaGame\\KnopkaGame\\KnopkaGame.csproj",
+  "projectFilePath": "D:\\C#\\KnopkaGameBeta\\KnopkaGame\\KnopkaGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kiril\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.0\\microsoft.data.sqlite.core.7.0.0.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
