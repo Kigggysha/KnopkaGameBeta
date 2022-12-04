@@ -4,6 +4,7 @@ using System.Numerics;
 using System.Windows.Forms;
 using System.Threading;
 using Microsoft.Data.Sqlite;
+using System.Reflection.Emit;
 
 namespace KnopkaGame
 {
@@ -127,6 +128,8 @@ namespace KnopkaGame
             Exit.Visible = false;
             this.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/TableBezWindows.png");//Changing form backgroung 
             Laptop.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/Laptop.png");
+            Cup.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/Cup.png");
+            Cup.Visible = true;
             Laptop.Visible = true;
         }
 
@@ -136,11 +139,6 @@ namespace KnopkaGame
             this.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/TableWindows10Red.png");
         }
 
-        private void keyisup(object sender, KeyEventArgs e)
-        {
-          
-        }
-
         private void keyisdown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -148,7 +146,46 @@ namespace KnopkaGame
                 Continue.Visible = true;
                 Settings.Visible = true;
                 Exit.Visible = true;
+                foreach (Control items in this.Controls)
+                {
+                    if (items is PictureBox && ((string)items.Tag == "Items" || ((string)items.Tag == "SettingsMenuUI")))
+                    {
+                        items.Visible = false;
+                    }
+                }
             }
         }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            Continue.Visible = false;//when the game starts the buttons are hidden
+            Settings.Visible = false;
+            Exit.Visible = false;
+            SettingsWindow.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/SettingsWindow.png");
+            SettingsClose.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/ExitButton.png");
+            SettingsClose.Visible = true;
+            SettingsWindow.Visible = true;
+        }
+
+        private void SettingsClose_MouseEnter(object sender, EventArgs e)
+        {
+            SettingsClose.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/ExitButtonLight.png");
+            ButtonSelect.Play();
+        }
+
+        private void SettingsClose_MouseLeave(object sender, EventArgs e)
+        {
+            SettingsClose.BackgroundImage = Image.FromFile("../KnopkaGame/Textures/ExitButton.png");
+        }
+
+        private void SettingsClose_Click(object sender, EventArgs e)
+        {
+            SettingsClose.Visible = false;
+            SettingsWindow.Visible = false;
+            Continue.Visible = true;
+            Settings.Visible = true;
+            Exit.Visible = true;
+        }
+
     }
 }

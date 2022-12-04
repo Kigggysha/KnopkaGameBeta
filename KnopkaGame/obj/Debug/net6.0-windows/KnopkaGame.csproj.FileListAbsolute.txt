@@ -114,5 +114,3 @@ D:\C#\KnopkaGame\KnopkaGame\bin\Debug\net6.0-windows\runtimes\win-arm64\native\e
 D:\C#\KnopkaGame\KnopkaGame\bin\Debug\net6.0-windows\runtimes\win-x64\native\e_sqlite3.dll
 D:\C#\KnopkaGame\KnopkaGame\bin\Debug\net6.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 D:\C#\KnopkaGame\KnopkaGame\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-D:\C#\KnopkaGame\KnopkaGame\bin\Debug\net6.0-windows\AxInterop.WMPLib.dll
-D:\C#\KnopkaGame\KnopkaGame\bin\Debug\net6.0-windows\Interop.WMPLib.dll

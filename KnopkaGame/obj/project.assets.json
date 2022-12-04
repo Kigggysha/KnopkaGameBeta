@@ -512,16 +512,6 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
-      },
-      "WMPLib/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/_._": {}
-        },
-        "runtime": {
-          "lib/AxInterop.WMPLib.dll": {},
-          "lib/Interop.WMPLib.dll": {}
-        }
       }
     }
   },
@@ -1184,27 +1174,12 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "WMPLib/1.0.0": {
-      "sha512": "hhTCfENN7xrSfUG7hrd/A9YiXVMVGHAc3Hv0USe6SvpacIDxVwiBb1X3nVzELpLtewjqqFy5dsWHwImpUy3vyw==",
-      "type": "package",
-      "path": "wmplib/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License/license.txt",
-        "lib/AxInterop.WMPLib.dll",
-        "lib/Interop.WMPLib.dll",
-        "wmplib.1.0.0.nupkg.sha512",
-        "wmplib.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "Microsoft.Data.Sqlite.Core >= 7.0.0",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.0",
-      "WMPLib >= 1.0.0"
+      "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.0"
     ]
   },
   "packageFolders": {
@@ -1253,12 +1228,6 @@
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
             "version": "[7.0.0, )"
-          },
-          "WMPLib": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[1.0.0, )"
           }
         },
         "imports": [
@@ -1283,17 +1252,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Пакет \"WMPLib 1.0.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
-      "libraryId": "WMPLib",
-      "targetGraphs": [
-        "net6.0-windows7.0"
-      ]
-    }
-  ]
+  }
 }
